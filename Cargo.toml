@@ -1,0 +1,45 @@
+[package]
+name = "untitled"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
+webparse = { version = "0.2.0"}
+tokio-util = "0.7"
+
+rustls = { version = "0.21.7", default-features = false }
+tokio-rustls="0.24.1"
+webpki-roots = "0.26"
+argh = "0.1"
+rustls-pemfile = "1.0.0"
+rustls-webpki = "0.101.3"
+rustls-native-certs = "0.6.3"
+
+
+[source.crates-io]
+replace-with = 'ustc'
+
+[source.ustc]
+registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+
+
+[[bin]]
+name = "udpserver"
+path = "src/udpserver.rs"
+
+
+
+[[bin]]
+name = "testTLSServer"
+path = "src/testTLSServer.rs"
+
+[[bin]]
+name = "testTLSClient"
+path = "src/testTLSClient.rs"
+
+
+[[bin]]
+name = "testTLSClient2"
+path = "src/testTLSClient2.rs"
