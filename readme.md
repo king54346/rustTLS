@@ -14,3 +14,6 @@ openssl x509 -req -days 365 -in csr.pem -signkey key.pem -out cert.pem -extfile 
 
 
  <!-- cargo run --bin testTLSServer localhost:8002 -c /home/rustTLS/cert.pem  -k /home/rustTLS/key.pem -->
+
+
+tokio支持tls连接
